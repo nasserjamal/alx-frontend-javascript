@@ -1,5 +1,9 @@
 export default function getListStudentIds(arr) {
   let ans = [];
-  ans = arr.map((obj) => obj.id);
+  try {
+    ans = arr.map((obj) => obj.id);
+  } catch (error) {
+    ans = [];
+  }
   return ans;
 }
